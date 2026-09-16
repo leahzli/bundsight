@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BundSight | Business Visits to Shanghai, from Arrival to Deal</title>
+<meta name="description" content="Factory visits, supplier meetings, trade fairs and negotiations in Shanghai, handled end to end: interpretation, scheduling, same-day summaries and follow-up. Written quote within 12 hours.">
+<link rel="canonical" href="https://bundsight.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="BundSight | Business Visits to Shanghai, from Arrival to Deal">
+<meta property="og:description" content="Factory visits, supplier meetings, trade fairs and negotiations in Shanghai, handled end to end.">
+<meta property="og:url" content="https://bundsight.com/">
+<meta property="og:site_name" content="BundSight">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://bundsight.com/#org",
+      "name": "BundSight",
+      "url": "https://bundsight.com/",
+      "email": "leahzliwork@gmail.com",
+      "description": "Business visits to Shanghai, handled from arrival to deal: factory visits, supplier meetings, trade fairs and negotiations with interpretation, scheduling and follow-up.",
+      "areaServed": ["Shanghai", "Suzhou", "Kunshan", "Hangzhou", "Ningbo"],
+      "availableLanguage": ["en", "zh", "wuu"],
+      "founder": {"@type": "Person", "name": "Leah Zhang"},
+      "address": {"@type": "PostalAddress", "addressLocality": "Shanghai", "addressCountry": "CN"},
+      "makesOffer": [
+        {"@type": "Offer", "name": "Visit Day", "priceCurrency": "USD", "price": "500"},
+        {"@type": "Offer", "name": "Deal Week"},
+        {"@type": "Offer", "name": "Delegation"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "Do you arrange visas, flights or hotels?", "acceptedAnswer": {"@type": "Answer", "text": "No. BundSight is a business-visit service, not a travel agency. We are happy to recommend hotels near your meetings."}},
+        {"@type": "Question", "name": "Which languages do you work in?", "acceptedAnswer": {"@type": "Answer", "text": "English and Mandarin, and Shanghainese, which still opens doors in this city. Other languages on request, with notice."}},
+        {"@type": "Question", "name": "Where do you operate?", "acceptedAnswer": {"@type": "Answer", "text": "Shanghai and the Yangtze River Delta: Suzhou, Kunshan, Hangzhou, Ningbo. Other cities by arrangement, with travel billed separately."}},
+        {"@type": "Question", "name": "How do I book?", "acceptedAnswer": {"@type": "Answer", "text": "Send your dates and a rough agenda. You will have a written quote within 12 hours. A 30% deposit confirms the booking; the balance is due after the visit."}},
+        {"@type": "Question", "name": "How do you take payment?", "acceptedAnswer": {"@type": "Answer", "text": "Bank transfer, Wise, PayPal or card."}},
+        {"@type": "Question", "name": "What happens when the visit turns into a deal?", "acceptedAnswer": {"@type": "Answer", "text": "We stay on: term summaries, follow-up with counterparties, and a review of the paperwork before you commit."}}
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root{
+    --paper:#f3eee2; --paper2:#e8e1d0; --ink:#1f2a2b; --ink2:#2b3839;
+    --ghost:#c9c4b3; --brass:#b8963f; --brass2:#d4b46a; --muted:#6b6a60;
+    --display:"Cormorant Garamond", Georgia, "Times New Roman", serif;
+    --body:"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    --gutter:clamp(16px, 4vw, 48px);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--paper);color:var(--ink)}
+  body{font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  body.locked{overflow:hidden}
+  a{color:inherit;text-decoration:none}
+  p{margin:0}
+  h1,h2,h3{margin:0;font-family:var(--display);font-weight:400;line-height:1;letter-spacing:.01em;text-transform:uppercase}
+  .label{font-family:var(--body);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);font-weight:500}
+  .label.brass{color:var(--brass)}
+  .wrap{max-width:1240px;margin:0 auto;padding:0 var(--gutter)}
+
+  /* ---------- fixed layers ---------- */
+  #fog{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+  #grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.35;mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .55 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+  #route{position:fixed;inset:0;width:100%;height:100%;z-index:2;pointer-events:none}
+  #route path{fill:none;stroke:var(--ink);stroke-width:1.1;stroke-opacity:.55;stroke-linecap:round;stroke-linejoin:round}
+  #route .wp{opacity:0}
+  #route .wp circle{fill:var(--paper);stroke:var(--ink);stroke-width:1}
+  #route .wp text{font-family:var(--body);font-size:10px;letter-spacing:.14em;text-transform:uppercase;fill:var(--ink)}
+  #marker{position:fixed;left:0;top:0;z-index:3;pointer-events:none;transform:translate(-50%,-50%);
+    padding:3px 8px;border:1px solid var(--ink);border-radius:999px;background:var(--paper);font-size:9px;letter-spacing:.2em;line-height:1;color:var(--ink);opacity:0}
+
+  .chrome{position:fixed;inset:0;z-index:30;pointer-events:none}
+  .chrome > *{pointer-events:auto;position:fixed}
+  .logo{left:var(--gutter);top:30px;font-family:var(--display);font-size:1.5rem;letter-spacing:.06em;text-transform:uppercase;font-weight:500;color:var(--ink);opacity:0}
+  .logo b{font-weight:500;color:var(--brass)}
+  .burger{right:var(--gutter);top:26px;width:46px;height:46px;border:1px solid var(--ink);background:rgba(243,238,226,.8);backdrop-filter:blur(6px);display:grid;place-items:center;cursor:pointer;opacity:0;transition:background .3s cubic-bezier(.33,1,.68,1)}
+  .burger:hover{background:var(--brass2)}
+  .burger i{display:block;width:16px;height:1px;background:var(--ink);position:relative;transition:transform .3s}
+  .burger i::before,.burger i::after{content:"";position:absolute;left:0;width:16px;height:1px;background:var(--ink);transition:transform .3s}
+  .burger i::before{top:-5px}.burger i::after{top:5px}
+  .logo,.burger,.burger i,.burger i::before,.burger i::after{transition:color .4s,border-color .4s,background .4s}
+  body.menu-open .logo,body.on-dark .logo{color:var(--paper)}
+  body.menu-open .burger,body.on-dark .burger{border-color:var(--paper);background:transparent}
+  body.menu-open .burger i::before,body.menu-open .burger i::after,body.on-dark .burger i::before,body.on-dark .burger i::after,body.on-dark .burger i{background:var(--paper)}
+  body.menu-open .burger i{background:transparent}
+  body.menu-open .burger i::before{transform:translateY(5px) rotate(45deg)}
+  body.menu-open .burger i::after{transform:translateY(-5px) rotate(-45deg)}
+  .coord{bottom:26px;font-family:var(--body);font-size:11px;letter-spacing:.08em;color:var(--ink);opacity:0}
+  .coord.l{left:var(--gutter)}.coord.r{right:var(--gutter)}
+  .coord-mid{bottom:34px;left:50%;transform:translateX(-50%);width:56px;height:1px;background:var(--ink);opacity:0}
+
+  /* menu overlay */
+  .menu-overlay{position:fixed;inset:0;z-index:25;background:var(--ink);color:var(--paper);transform:translateY(-120%);display:flex;flex-direction:column;justify-content:center;padding:0 var(--gutter)}
+  .menu-overlay .label{color:var(--brass2);margin-bottom:18px}
+  .menu-overlay a{display:block;font-family:var(--display);font-size:clamp(2.4rem,7vw,5.4rem);line-height:1.05;text-transform:uppercase;letter-spacing:.02em;opacity:0;transform:translateY(20px)}
+  .menu-overlay a:hover{color:var(--brass2)}
+  .menu-overlay .foot{position:absolute;left:var(--gutter);right:var(--gutter);bottom:30px;display:flex;justify-content:space-between;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(243,238,226,.6)}
+
+  /* preloader */
+  .preloader{position:fixed;inset:0;z-index:40;background:var(--paper);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px}
+  .preloader .num{font-family:var(--display);font-size:clamp(4rem,12vw,9rem);line-height:1;color:var(--ink);font-variant-numeric:tabular-nums}
+  .preloader .label{color:var(--muted)}
+
+  /* ---------- page ---------- */
+  main{position:relative;z-index:5}
+  section{position:relative}
+
+  .hero{min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end}
+  .hero-top{padding:22vh var(--gutter) 6vh;text-align:center}
+  .hero-top h1{font-size:clamp(1.7rem,3.6vw,2.8rem);line-height:1.18;letter-spacing:.06em;opacity:0}
+  .band{background:var(--ink);color:var(--paper);overflow:hidden;padding:20vh 0 4vh;position:relative;isolation:isolate}
+  .band .bg{position:absolute;left:0;right:0;top:-12%;height:124%;background:url("assets/hero-shanghai.jpg") center 38%/cover no-repeat;opacity:.62;z-index:-2;will-change:transform}
+  @media(max-width:860px){.band{padding:12vh 0 4vh}}
+  .band::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(31,42,43,.55) 0%,rgba(31,42,43,.18) 45%,rgba(31,42,43,.72) 100%)}
+  .band .word{font-family:var(--display);font-size:clamp(4.4rem,15.6vw,15rem);line-height:.9;letter-spacing:.02em;text-transform:uppercase;white-space:nowrap;display:block;padding:0 var(--gutter);will-change:transform}
+  .band .word b{font-weight:400;color:var(--brass2)}
+  .band .sub{display:flex;justify-content:space-between;align-items:flex-end;padding:3vh var(--gutter) 0;gap:24px;flex-wrap:wrap}
+  .band .sub .label{color:rgba(243,238,226,.7)}
+  .band .sub .scroll{display:flex;align-items:center;gap:12px}
+  .band .sub .scroll i{display:block;width:40px;height:1px;background:var(--brass2);animation:pulse 1.8s ease-in-out infinite}
+  @keyframes pulse{0%,100%{transform:scaleX(.4);opacity:.4}50%{transform:scaleX(1);opacity:1}}
+
+  /* word reveal blocks */
+  .reveal{min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;padding:14vh var(--gutter)}
+  .reveal .txt{font-family:var(--display);font-size:min(5.2vw,13vh);line-height:1.02;text-transform:uppercase;letter-spacing:.01em;max-width:1200px;margin:0 auto}
+  @media(max-width:600px){.reveal .txt{font-size:min(9.6vw,20vh)}}
+  .w{display:inline-block;position:relative;white-space:nowrap}
+  .w::before{content:attr(data-w);position:absolute;left:0;top:0;color:var(--ghost)}
+  .w .k{position:relative;color:var(--ink);opacity:0}
+  .w.brass .k{color:var(--brass)}
+  .reveal .after{margin-top:32px;opacity:0;transform:translateY(10px)}
+
+  /* how */
+  .how{padding:6vh 0 4vh}
+  .step{min-height:92svh;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;padding:8vh 0}
+  .step .num{font-family:var(--display);font-size:clamp(6rem,16vw,15rem);line-height:.85;color:var(--ghost);position:relative}
+  .step .num span{position:absolute;left:0;top:0;color:var(--ink);clip-path:inset(0 100% 0 0)}
+  .step .body h3{font-size:clamp(2rem,4.2vw,3.6rem);margin-bottom:18px}
+  .step .body p{font-size:1.05rem;color:var(--ink2);max-width:46ch}
+  .step .body .label{margin-bottom:16px;display:block}
+  @media(max-width:860px){.step{grid-template-columns:1fr;gap:20px;min-height:auto;padding:10vh 0}.step .num{font-size:22vw}}
+
+  /* services / cards */
+  .services{height:100svh;padding:12vh 0 4vh;text-align:center;position:relative;display:flex;flex-direction:column}
+  .services > .wrap{display:flex;flex-direction:column;flex:1;min-height:0;width:100%}
+  .services h2{font-size:clamp(2rem,4.6vw,3.8rem);margin-top:14px}
+  .ghost-title{position:absolute;left:0;right:0;top:34%;font-family:var(--display);font-size:min(11vw,22vh);line-height:.95;text-transform:uppercase;color:var(--ghost);opacity:.55;pointer-events:none;padding:0 var(--gutter)}
+  .stage{position:relative;flex:1;min-height:0;margin-top:2vh;perspective:1600px;transform-style:preserve-3d}
+  .terms{padding:12vh 0 6vh}
+  .incl ul{list-style:none;margin:0;padding:0}
+  .incl li{padding:3px 0}
+  .card{position:absolute;left:50%;top:50%;width:min(320px,78vw);aspect-ratio:3/4.15;margin-left:calc(min(320px,78vw) / -2);margin-top:calc(min(320px,78vw) * -0.69);
+    background:linear-gradient(170deg,#fbf8f0,#f1ebdc);border:1px solid rgba(31,42,43,.12);box-shadow:0 30px 60px rgba(31,42,43,.18), 0 2px 0 rgba(255,255,255,.7) inset;
+    padding:28px 26px;display:flex;flex-direction:column;text-align:center;backface-visibility:hidden;will-change:transform;cursor:none}
+  .card::before{content:"";position:absolute;inset:8px;border:1px solid rgba(31,42,43,.14);pointer-events:none}
+  .card .tag{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+  .card h3{font-size:2.3rem;margin:22px 0 10px}
+  .card p{font-size:.86rem;color:var(--ink2);line-height:1.5;flex:1}
+  .card .price{font-family:var(--display);font-style:italic;font-size:1.5rem;color:var(--brass);margin-top:14px}
+  .card .price small{display:block;font-family:var(--body);font-style:normal;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+  .card .stamp{position:absolute;right:18px;top:16px;width:46px;height:46px;border:1px solid var(--brass);border-radius:50%;display:grid;place-items:center;font-size:8px;letter-spacing:.14em;color:var(--brass);transform:rotate(12deg)}
+  .c1{transform:translateX(-52%) rotate(-7deg)} .c2{transform:rotate(1.5deg)} .c3{transform:translateX(52%) rotate(6.5deg)}
+  .incl{display:flex;justify-content:center;gap:64px;flex-wrap:wrap;font-size:.9rem;color:var(--ink2);text-align:left}
+  .incl > div{min-width:220px}
+  .incl b{display:block;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink);margin-bottom:8px;font-weight:500}
+  @media(max-width:860px){.services{height:auto;padding:12vh 0 4vh}.stage{height:auto;flex:none;perspective:none;display:grid;gap:22px;justify-items:center;padding:20px 0}.card{position:relative;left:auto;top:auto;margin:0;cursor:default}.c1,.c3{transform:none}.c1{transform:rotate(-2deg)}.c3{transform:rotate(2deg)}.ghost-title{display:none}}
+
+  .cursor-dot{position:fixed;left:0;top:0;width:82px;height:82px;border-radius:50%;background:var(--ink);color:var(--brass2);display:grid;place-items:center;font-size:12px;letter-spacing:.14em;text-transform:uppercase;pointer-events:none;z-index:50;opacity:0;transform:translate(-50%,-50%) scale(.6);box-shadow:0 8px 24px rgba(0,0,0,.2)}
+  @media(hover:none),(pointer:coarse){.cursor-dot{display:none}}
+
+  /* who */
+  .who{padding:14vh 0}
+  .who .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid rgba(31,42,43,.2);margin-top:6vh}
+  .who .grid div{padding:28px 22px 32px;border-right:1px solid rgba(31,42,43,.14);opacity:0;transform:translateY(24px)}
+  .who .grid div:last-child{border-right:0}
+  .who h3{font-size:1.5rem;margin-bottom:10px}
+  .who p{font-size:.92rem;color:var(--ink2)}
+  @media(max-width:900px){.who .grid{grid-template-columns:1fr 1fr}.who .grid div:nth-child(2n){border-right:0}}
+  @media(max-width:560px){.who .grid{grid-template-columns:1fr}.who .grid div{border-right:0;border-bottom:1px solid rgba(31,42,43,.14)}}
+
+  /* about */
+  .about{padding:10vh 0 14vh}
+  .about .wrap{display:grid;grid-template-columns:.75fr 1.25fr;gap:64px;align-items:center}
+  .portrait{width:min(360px,80vw);aspect-ratio:4/5;background:linear-gradient(170deg,#e6dfcd,#cfc6ad);border:1px solid rgba(31,42,43,.15);box-shadow:0 30px 60px rgba(31,42,43,.16);transform:rotate(-3deg);position:relative;margin:0 auto}
+  .portrait::before{content:"";position:absolute;inset:8px;border:1px solid rgba(243,238,226,.55);z-index:1;pointer-events:none}
+  .portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block;filter:saturate(.92)}
+  .about h2{font-size:clamp(2rem,4vw,3.4rem);margin-top:14px}
+  .about p{margin-top:18px;color:var(--ink2);font-size:1.02rem;max-width:56ch}
+  .about .sig{font-family:var(--display);font-style:italic;font-size:1.5rem;color:var(--ink);text-transform:none;letter-spacing:0}
+  @media(max-width:900px){.about .wrap{grid-template-columns:1fr}}
+
+  /* faq */
+  .faq{padding:6vh 0 14vh}
+  .faq h2{font-size:clamp(2rem,4vw,3.4rem);margin-top:14px;margin-bottom:5vh}
+  .faq details{border-top:1px solid rgba(31,42,43,.2);padding:20px 0;opacity:0;transform:translateY(12px)}
+  .faq details:last-child{border-bottom:1px solid rgba(31,42,43,.2)}
+  .faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px;font-family:var(--display);font-size:1.45rem;text-transform:uppercase;letter-spacing:.02em}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";color:var(--brass);font-family:var(--body);transition:transform .2s}
+  .faq details[open] summary::after{transform:rotate(45deg)}
+  .faq details p{margin-top:12px;color:var(--ink2);max-width:64ch}
+
+  /* contact */
+  .contact{padding:0 0 10vh}
+  .contact .panel{background:var(--ink);color:var(--paper);padding:clamp(40px,6vw,80px) var(--gutter);display:grid;grid-template-columns:1fr 1fr;gap:56px;position:relative;overflow:hidden}
+  .contact .panel > *{position:relative}
+  .contact .panel .label{color:var(--brass2)}
+  .contact h2{font-size:clamp(2rem,4.4vw,3.8rem);margin-top:14px}
+  .contact .lede{margin-top:18px;color:rgba(243,238,226,.7);max-width:44ch}
+  .contact .mail{margin-top:30px;font-family:var(--display);font-size:1.6rem;text-transform:uppercase;letter-spacing:.04em}
+  .contact .mail a{border-bottom:1px solid var(--brass2)}
+  .contact .social{margin-top:34px;display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+  .contact .social .label{color:rgba(243,238,226,.5);margin-right:6px}
+  .contact .social a{color:var(--paper);border-bottom:1px solid rgba(243,238,226,.25);padding-bottom:2px}
+  .contact .social a:hover{border-bottom-color:var(--brass2);color:var(--brass2)}
+  footer .social-foot{display:flex;gap:16px;flex-wrap:wrap}
+  footer .social-foot a:hover{color:var(--ink)}
+  form{display:grid;gap:14px}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  label{display:block;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(243,238,226,.6);margin-bottom:6px}
+  input,textarea{width:100%;background:transparent;border:0;border-bottom:1px solid rgba(243,238,226,.3);color:var(--paper);padding:10px 0;font:inherit;font-size:.95rem;outline:none}
+  input:focus,textarea:focus{border-bottom-color:var(--brass2)}
+  textarea{min-height:100px;resize:vertical}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:13px 24px;border:1px solid var(--brass2);color:var(--brass2);font-size:11px;letter-spacing:.18em;text-transform:uppercase;background:transparent;cursor:pointer;transition:all .3s cubic-bezier(.33,1,.68,1);font-family:var(--body)}
+  .btn:hover{background:var(--brass2);color:var(--ink)}
+  form .btn{justify-self:start;margin-top:8px}
+  .big-ghost{position:absolute;right:-2vw;bottom:-2vh;font-family:var(--display);font-size:min(22vw,34vh);line-height:.8;text-transform:uppercase;color:rgba(243,238,226,.05);pointer-events:none;white-space:nowrap}
+  @media(max-width:900px){.contact .panel{grid-template-columns:1fr}.row{grid-template-columns:1fr}}
+
+  footer{padding:30px var(--gutter) 40px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+
+  @media(prefers-reduced-motion:reduce){
+    .w .k,.who .grid div,.faq details,.reveal .after,.logo,.burger,.coord,.coord-mid,.hero-top .label,.hero-top h1{opacity:1!important;transform:none!important}
+    .step .num span{clip-path:none}
+    .band .sub .scroll i{animation:none}
+  }
+</style>
+</head>
+<body class="locked">
+
+<canvas id="fog" aria-hidden="true"></canvas>
+<div id="grain" aria-hidden="true"></div>
+<svg id="route" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  <path id="routePath" d="M 1300 -40 C 1240 60, 1180 120, 1120 150 S 1010 190, 980 250 S 960 360, 900 400 S 780 430, 740 500 S 700 620, 640 650 S 520 660, 470 720 S 420 840, 380 900 S 320 1000, 300 1040"/>
+  <g class="wp" data-at="0.04"><circle cx="1128" cy="146" r="4"/><text x="1142" y="150">PVG · Arrival</text></g>
+  <g class="wp" data-at="0.30"><circle cx="905" cy="398" r="4"/><text x="919" y="402">Lujiazui · Meetings</text></g>
+  <g class="wp" data-at="0.55"><circle cx="740" cy="500" r="4"/><text x="754" y="504">The Bund · Dinner</text></g>
+  <g class="wp" data-at="0.76"><circle cx="472" cy="720" r="4"/><text x="486" y="724">Kunshan · Factory</text></g>
+  <g class="wp" data-at="0.95"><circle cx="382" cy="898" r="4"/><text x="396" y="890">Deal</text></g>
+</svg>
+<div id="marker" aria-hidden="true">···</div>
+
+<div class="chrome">
+  <a class="logo" href="#top">Bund<b>Sight</b></a>
+  <button class="burger" aria-label="Menu"><i></i></button>
+</div>
+
+<nav class="menu-overlay" aria-hidden="true">
+  <div class="label">BundSight · Shanghai</div>
+  <a href="#how">How it works</a>
+  <a href="#services">Services</a>
+  <a href="#who">Who it's for</a>
+  <a href="#about">About</a>
+  <a href="#faq">Questions</a>
+  <a href="#contact">Plan your visit</a>
+  <div class="foot"><span>leahzliwork@gmail.com</span><span>English · Mandarin · Shanghainese</span></div>
+</nav>
+
+<div class="preloader" aria-hidden="true">
+  <div class="num">0</div>
+  <div class="label">Loading BundSight</div>
+</div>
+
+<div class="cursor-dot" aria-hidden="true">Book</div>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero-top">
+      <h1>Business visits to Shanghai,<br>handled from arrival to deal.</h1>
+    </div>
+    <div class="band">
+      <div class="bg" aria-hidden="true"></div>
+      <span class="word" id="bandWord">Bund<b>Sight</b></span>
+      <div class="sub">
+        <p class="label">Factory floors · Supplier meetings · Trade fairs · Negotiations</p>
+        <div class="scroll"><i></i><span class="label">Scroll to explore</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <div>
+      <p class="txt" data-reveal>Most business trips to China lose their value in the gaps: between meetings, between languages, between the handshake and the paperwork.</p>
+      <p class="txt after" style="font-size:min(3.2vw,7vh)"><span style="color:var(--brass)">We work the gaps.</span></p>
+    </div>
+  </section>
+
+  <section class="how" id="how">
+    <div class="wrap">
+      <div class="step">
+        <div class="num" data-num>01<span>01</span></div>
+        <div class="body">
+          <span class="label brass">Before you land</span>
+          <h3 data-reveal>We read your agenda and research who you're meeting.</h3>
+          <p>Every meeting confirmed, every counterparty looked up, and a day-by-day schedule that survives Shanghai traffic.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="num" data-num>02<span>02</span></div>
+        <div class="body">
+          <span class="label brass">On the ground</span>
+          <h3 data-reveal>Interpretation in every room, notes you didn't have to take.</h3>
+          <p>You stay in the conversation. A written summary is in your inbox the same evening.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="num" data-num>03<span>03</span></div>
+        <div class="body">
+          <span class="label brass">From visit to deal</span>
+          <h3 data-reveal>Term summaries, follow-up, and paperwork read properly before you sign.</h3>
+          <p>We stay on with the factories and partners you met until there is a clear next step, or a signed one.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="ghost-title">Three ways<br>to work with us</div>
+    <div class="wrap">
+      <div class="label">Services</div>
+      <h2>Three ways to work with us.</h2>
+      <div class="stage" id="stage">
+        <div class="card c1" data-card>
+          <div class="stamp">Day</div>
+          <div class="tag">Visit Day</div>
+          <h3>One day,<br>one agenda.</h3>
+          <p>Factory visits, supplier meetings or a trade-fair floor, with interpretation, coordination and a same-day written summary.</p>
+          <div class="price">from USD 500 / day<small>Half day from USD 300</small></div>
+        </div>
+        <div class="card c2" data-card>
+          <div class="stamp">Week</div>
+          <div class="tag">Deal Week</div>
+          <h3>Three to<br>five days.</h3>
+          <p>Pre-trip research and scheduling, daily accompaniment, negotiation support and post-visit follow-up with every counterparty.</p>
+          <div class="price">Project-priced<small>Quote within 12 hours</small></div>
+        </div>
+        <div class="card c3" data-card>
+          <div class="stamp">Group</div>
+          <div class="tag">Delegation</div>
+          <h3>Groups and<br>trade missions.</h3>
+          <p>Itinerary design, meetings with local partners and institutions, logistics, interpretation and a post-visit report.</p>
+          <div class="price">By quote<small>From 4 people</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="terms">
+    <div class="wrap incl">
+      <div><b>Included in every engagement</b>
+        <ul><li>Pre-meeting briefing</li><li>Daily written summary</li><li>Follow-up after the visit</li></ul></div>
+      <div><b>Not included</b>
+        <ul><li>Flights and hotels</li><li>Local and inter-city transport</li><li>Overtime beyond eight hours</li><li>Third-party fees</li></ul></div>
+    </div>
+  </section>
+
+  <section class="who" id="who">
+    <div class="wrap">
+      <div class="label">Who it's for</div>
+      <h2 class="txt" data-reveal style="font-size:clamp(2rem,4.6vw,3.8rem);margin-top:14px">People with a reason to be here.</h2>
+      <div class="grid">
+        <div><h3>First-time buyers</h3><p>Sourcing products, visiting factories, checking a supplier in person before the first order.</p></div>
+        <div><h3>Founders &amp; executives</h3><p>Meeting partners, distributors or investors in Shanghai, and needing the meeting to actually land.</p></div>
+        <div><h3>Exhibitors</h3><p>Working a trade-fair floor with someone who can talk to every booth and remember what was said.</p></div>
+        <div><h3>Small delegations</h3><p>Chambers, associations and company groups on a working visit with a full agenda.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="wrap">
+      <div class="portrait" data-tilt><img src="assets/leah.jpg" alt="Leah Zhang" loading="lazy"></div>
+      <div>
+        <div class="label">About</div>
+        <h2 data-reveal>BundSight is run by Leah Zhang.</h2>
+        <p>Leah is a Shanghai local, born here and based here, at home in Shanghainese as well as Mandarin and English. She trained as a lawyer, with an LL.M. from the University of Michigan and PRC qualification, and spent years on cross-border transactions before starting BundSight.</p>
+        <p>It means she reads a factory quotation, a distribution term sheet or a joint-venture proposal the way your counterparties do, and tells you what is actually on the table.</p>
+        <p class="sig">“You will not be the only person in the room who understood the meeting.”</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <div class="wrap" style="max-width:860px">
+      <div class="label">Questions</div>
+      <h2>Before you write to us.</h2>
+      <details><summary>Do you arrange visas, flights or hotels?</summary><p>No. BundSight is a business-visit service, not a travel agency. We are happy to recommend hotels close to your meetings.</p></details>
+      <details><summary>Which languages do you work in?</summary><p>English and Mandarin, and Shanghainese, which still opens doors in this city. Other languages on request, with notice.</p></details>
+      <details><summary>Where do you operate?</summary><p>Shanghai and the Yangtze River Delta: Suzhou, Kunshan, Hangzhou, Ningbo. Other cities by arrangement, with travel billed separately.</p></details>
+      <details><summary>How do I book?</summary><p>Send your dates and a rough agenda. You will have a written quote within 12 hours. A 30% deposit confirms the booking; the balance is due after the visit.</p></details>
+      <details><summary>How do you take payment?</summary><p>Bank transfer, Wise, PayPal or card.</p></details>
+      <details><summary>What happens when the visit turns into a deal?</summary><p>We stay on. Term summaries, follow-up with the counterparties, and a review of the paperwork before you commit to anything.</p></details>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="panel">
+      <div class="big-ghost">Deal</div>
+      <div>
+        <div class="label">Plan your visit</div>
+        <h2>Tell us your dates and your agenda.</h2>
+        <p class="lede">And what a good outcome looks like. You will have a written quote within 12 hours, with no obligation.</p>
+        <div class="mail"><a href="mailto:leahzliwork@gmail.com">leahzliwork@gmail.com</a></div>
+        <!-- Social slots: fill href when the accounts exist. Keep the order. -->
+        <div class="social">
+          <span class="label">Find us</span>
+          <a href="#" data-todo="instagram">Instagram</a>
+          <a href="#" data-todo="facebook">Facebook</a>
+          <a href="#" data-todo="tiktok">TikTok</a>
+          <a href="#" data-todo="x">X</a>
+          <a href="#" data-todo="whatsapp">WhatsApp</a>
+        </div>
+      </div>
+      <form action="#" method="post" onsubmit="event.preventDefault();alert('Form placeholder — connect to Formspree / Tally before launch.');">
+        <div class="row">
+          <div><label for="n">Name</label><input id="n" name="name" required></div>
+          <div><label for="c">Company</label><input id="c" name="company"></div>
+        </div>
+        <div class="row">
+          <div><label for="e">Email</label><input id="e" name="email" type="email" required></div>
+          <div><label for="w">WhatsApp</label><input id="w" name="whatsapp" type="tel" placeholder="With country code, e.g. +44 7700 900000" inputmode="tel"></div>
+        </div>
+        <div><label for="d">Dates in Shanghai</label><input id="d" name="dates" placeholder="e.g. 12–16 November"></div>
+        <div><label for="m">What you need</label><textarea id="m" name="message" placeholder="Factories to visit, meetings planned, fairs, what a good outcome looks like."></textarea></div>
+        <button class="btn" type="submit">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2026 BundSight · Shanghai</span>
+    <span class="social-foot"><a href="#" data-todo="instagram">Instagram</a><a href="#" data-todo="facebook">Facebook</a><a href="#" data-todo="tiktok">TikTok</a><a href="#" data-todo="x">X</a><a href="#" data-todo="whatsapp">WhatsApp</a></span>
+    <span>leahzliwork@gmail.com</span>
+  </footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+(function(){
+  // No-GSAP fallback: if the CDN is unreachable, unlock the page and show everything static.
+  if (!window.gsap || !window.ScrollTrigger) {
+    document.body.classList.remove('locked');
+    const pre = document.querySelector('.preloader'); if (pre) pre.remove();
+    document.querySelectorAll('.logo,.burger,.coord,.coord-mid,.hero-top .label,.hero-top h1,.who .grid div,.faq details,.reveal .after')
+      .forEach(el => { el.style.opacity = 1; el.style.transform = 'none'; });
+    document.querySelectorAll('[data-num] span').forEach(s => s.style.clipPath = 'none');
+    document.querySelectorAll('.menu-overlay a').forEach(a => { a.style.opacity = 1; a.style.transform = 'none'; });
+    const ov = document.querySelector('.menu-overlay'), bg = document.querySelector('.burger');
+    bg.addEventListener('click', () => { const o = document.body.classList.toggle('menu-open'); ov.style.transform = o ? 'translateY(0)' : 'translateY(-120%)'; ov.style.transition = 'transform .6s cubic-bezier(.65,0,.35,1)'; });
+    ov.querySelectorAll('a').forEach(a => a.addEventListener('click', () => bg.click()));
+    return;
+  }
+  gsap.registerPlugin(ScrollTrigger);
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const touch = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
+  const mobile = () => innerWidth < 860;
+
+  /* ---------- fog canvas ---------- */
+  const fog = document.getElementById('fog'), fx = fog.getContext('2d');
+  let W, H, blobs = [];
+  function sizeFog(){
+    W = fog.width = Math.ceil(innerWidth / 2); H = fog.height = Math.ceil(innerHeight / 2);
+    blobs = Array.from({length: 6}, (_, i) => ({
+      x: Math.random() * W, y: Math.random() * H, r: (0.35 + Math.random() * 0.35) * Math.max(W, H),
+      dx: (Math.random() - .5) * .08, dy: (Math.random() - .5) * .06, a: .10 + Math.random() * .08, tone: i % 2 ? '#d9d0bb' : '#e2dac7'
+    }));
+  }
+  sizeFog(); addEventListener('resize', sizeFog);
+  let lastY = 0;
+  function drawFog(){
+    fx.clearRect(0,0,W,H);
+    const sy = (scrollY - lastY) * 0.02; lastY = scrollY;
+    for (const b of blobs){
+      b.x += b.dx; b.y += b.dy - sy;
+      if (b.x < -b.r) b.x = W + b.r; if (b.x > W + b.r) b.x = -b.r;
+      if (b.y < -b.r) b.y = H + b.r; if (b.y > H + b.r) b.y = -b.r;
+      const g = fx.createRadialGradient(b.x, b.y, 0, b.x, b.y, b.r);
+      g.addColorStop(0, b.tone); g.addColorStop(1, 'rgba(243,238,226,0)');
+      fx.globalAlpha = b.a; fx.fillStyle = g; fx.fillRect(0,0,W,H);
+    }
+    if (!reduce) requestAnimationFrame(drawFog);
+  }
+  drawFog();
+
+  /* ---------- route line drawn by scroll ---------- */
+  const path = document.getElementById('routePath');
+  const len = path.getTotalLength();
+  path.style.strokeDasharray = len; path.style.strokeDashoffset = len;
+  const wps = [...document.querySelectorAll('#route .wp')];
+  const marker = document.getElementById('marker');
+  const svg = document.getElementById('route');
+  function routeAt(p){
+    path.style.strokeDashoffset = len * (1 - p);
+    // Dots stay once passed; labels show only while the tip is near, so they never sit on top of copy for long.
+    wps.forEach(w => {
+      const at = +w.dataset.at, dot = w.querySelector('circle'), txt = w.querySelector('text');
+      w.style.transition = 'opacity .5s'; txt.style.transition = 'opacity .5s';
+      w.style.opacity = p > at ? 1 : 0;
+      txt.style.opacity = (p > at && p < at + 0.10) ? 1 : 0;
+    });
+    // marker follows the drawn tip, mapped from viewBox to screen
+    const pt = path.getPointAtLength(len * p);
+    const m = svg.getScreenCTM(); if (!m) return;
+    const sx = pt.x * m.a + pt.y * m.c + m.e, syy = pt.x * m.b + pt.y * m.d + m.f;
+    marker.style.transform = `translate(${sx}px, ${syy}px) translate(-50%,-50%)`;
+  }
+  ScrollTrigger.create({ start: 0, end: () => document.documentElement.scrollHeight - innerHeight, scrub: 1.2,
+    onUpdate: s => routeAt(reduce ? 1 : s.progress) });
+
+  /* ---------- word splitting (ghost + ink) ---------- */
+  document.querySelectorAll('[data-reveal]').forEach(el => {
+    const words = el.textContent.trim().split(/\s+/);
+    // Ghost layer is a CSS pseudo-element (not real text), so copy/paste and screen readers get each word once.
+    el.innerHTML = words.map(w => `<span class="w" data-w="${w.replace(/"/g, '&quot;')}"><span class="k">${w}</span></span>`).join(' ');
+  });
+
+  /* ---------- preloader ---------- */
+  const pre = document.querySelector('.preloader'), num = pre.querySelector('.num');
+  const counter = { v: 0 };
+  const intro = gsap.timeline({ paused: true });
+  intro.to(counter, { v: 100, duration: reduce ? 0.2 : 1.3, ease: 'power2.inOut', onUpdate: () => num.textContent = Math.round(counter.v) })
+       .to(pre, { yPercent: -100, duration: .9, ease: 'power3.inOut' }, '+=0.15')
+       .add(() => { document.body.classList.remove('locked'); window.__ready = true; ScrollTrigger.refresh(); })
+       .to('.logo, .burger', { opacity: 1, duration: .8, stagger: .05 }, '-=0.5')
+       .fromTo('.hero-top h1', { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: .9, ease: 'power2.out' }, '-=0.5')
+       .from('#bandWord', { yPercent: 40, opacity: 0, duration: 1.1, ease: 'power3.out' }, '-=0.7')
+       .from('.band .sub > *', { y: 16, opacity: 0, duration: .7, stagger: .12, ease: 'power2.out' }, '-=0.6');
+  addEventListener('load', () => intro.play());
+  setTimeout(() => { if (!window.__ready && !intro.isActive()) intro.play(); }, 2500);
+
+  /* ---------- logo/burger flip to paper while a dark block sits under them ---------- */
+  ['.band', '.contact .panel'].forEach(sel => ScrollTrigger.create({ trigger: sel, start: 'top 52px', end: 'bottom 52px',
+    toggleClass: { targets: 'body', className: 'on-dark' } }));
+
+  /* ---------- hero photo drifts vertically only; the wordmark stays put ---------- */
+  gsap.to('.band .bg', { yPercent: 10, ease: 'none', scrollTrigger: { trigger: '.band', start: 'top bottom', end: 'bottom top', scrub: 1 } });
+
+  /* ---------- word reveals, scrubbed ---------- */
+  document.querySelectorAll('[data-reveal]').forEach(el => {
+    const inks = el.querySelectorAll('.k');
+    if (reduce) { gsap.set(inks, { opacity: 1 }); return; }
+    gsap.fromTo(inks, { opacity: 0 }, { opacity: 1, ease: 'none', stagger: .5, duration: 1,
+      scrollTrigger: { trigger: el, start: 'top 82%', end: 'top 22%', scrub: 1 } });
+  });
+  gsap.to('.reveal .after', { opacity: 1, y: 0, duration: .8, ease: 'power2.out',
+    scrollTrigger: { trigger: '.reveal', start: 'center 40%' } });
+
+  /* ---------- step numerals wipe ---------- */
+  document.querySelectorAll('[data-num] span').forEach(s => {
+    gsap.fromTo(s, { clipPath: 'inset(0 100% 0 0)' }, { clipPath: 'inset(0 0% 0 0)', ease: 'none',
+      scrollTrigger: { trigger: s.parentElement, start: 'top 80%', end: 'top 30%', scrub: 1 } });
+  });
+
+  /* ---------- 3D cards ---------- */
+  const cards = document.querySelectorAll('[data-card]');
+  let cardsTl = null;
+  function buildCards(){
+    if (cardsTl) { cardsTl.scrollTrigger && cardsTl.scrollTrigger.kill(true); cardsTl.kill(); cardsTl = null; }
+    if (mobile() || reduce) { gsap.set(cards, { clearProps: 'all' }); return; }
+    const vw = innerWidth;
+    const rest = [{ x: -vw * .16, r: -7 }, { x: 0, r: 1.5 }, { x: vw * .16, r: 6.5 }];
+    cards.forEach((c, i) => gsap.set(c, { transformOrigin: '50% 50%', x: (i - 1) * vw * .6, rotationY: (i - 1) * 90, z: -700, rotation: rest[i].r, opacity: 0 }));
+    // Section pins; each card arrives on its own stretch of scroll, one after another.
+    cardsTl = gsap.timeline({ scrollTrigger: { trigger: '.services', start: 'top top', end: '+=260%', pin: true, scrub: 1, anticipatePin: 1 } });
+    cards.forEach((c, i) => cardsTl.to(c, { x: rest[i].x, rotationY: 0, z: 0, opacity: 1, ease: 'power2.inOut', duration: 1 }, i * 1.2));
+    cardsTl.to({}, { duration: .7 }); // hold with all three in place before the section releases
+  }
+  buildCards();
+  // The pinned services block adds scroll distance; triggers created before it must be re-sorted so their positions include the pin spacer.
+  ScrollTrigger.sort(); ScrollTrigger.refresh();
+  let rt; addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(() => { buildCards(); ScrollTrigger.sort(); ScrollTrigger.refresh(); }, 120); });
+
+  /* ---------- custom cursor on cards ---------- */
+  const dot = document.querySelector('.cursor-dot');
+  if (!touch && !reduce) {
+    const qx = gsap.quickTo(dot, 'left', { duration: .22, ease: 'power3.out' });
+    const qy = gsap.quickTo(dot, 'top', { duration: .22, ease: 'power3.out' });
+    addEventListener('mousemove', e => { qx(e.clientX); qy(e.clientY); });
+    cards.forEach(c => {
+      c.addEventListener('mouseenter', () => gsap.to(dot, { opacity: 1, scale: 1, duration: .18, ease: 'power2.out' }));
+      c.addEventListener('mouseleave', () => gsap.to(dot, { opacity: 0, scale: .6, duration: .18, ease: 'power2.in' }));
+      c.addEventListener('click', () => location.hash = '#contact');
+    });
+  }
+
+  /* ---------- who / faq / about rises ---------- */
+  gsap.to('.who .grid div', { opacity: 1, y: 0, duration: .8, stagger: .1, ease: 'power2.out',
+    scrollTrigger: { trigger: '.who .grid', start: 'top 80%' } });
+  gsap.to('.faq details', { opacity: 1, y: 0, duration: .6, stagger: .07, ease: 'power2.out',
+    scrollTrigger: { trigger: '.faq', start: 'top 70%' } });
+  gsap.fromTo('[data-tilt]', { rotation: -9, y: 60 }, { rotation: -3, y: 0, ease: 'none',
+    scrollTrigger: { trigger: '.about', start: 'top 90%', end: 'top 20%', scrub: 1 } });
+  gsap.from('.contact .panel > *', { y: 60, opacity: 0, duration: 1, stagger: .12, ease: 'power2.out',
+    scrollTrigger: { trigger: '.contact', start: 'top 75%' } });
+
+  /* ---------- menu overlay ---------- */
+  const overlay = document.querySelector('.menu-overlay'), links = overlay.querySelectorAll('a'), burger = document.querySelector('.burger');
+  let open = false;
+  gsap.set(overlay, { y: 0, yPercent: -120 }); // clear the CSS px translate GSAP parses, own it via yPercent
+  const menuTl = gsap.timeline({ paused: true })
+    .to(overlay, { yPercent: 0, duration: .8, ease: 'power3.inOut' })
+    .to(links, { opacity: 1, y: 0, duration: .5, stagger: .06, ease: 'power2.out' }, '-=0.3');
+  function toggle(force){
+    open = force ?? !open;
+    document.body.classList.toggle('menu-open', open);
+    overlay.setAttribute('aria-hidden', String(!open));
+    open ? menuTl.play() : menuTl.reverse();
+  }
+  burger.addEventListener('click', () => toggle());
+  links.forEach(a => a.addEventListener('click', () => toggle(false)));
+  addEventListener('keydown', e => { if (e.key === 'Escape' && open) toggle(false); });
+})();
+</script>
+<!-- Compliance placeholder for Leah's decision: whether to add a one-line note separating BundSight's visit/interpretation services from legal services provided through her firm. Not shown until decided. -->
+</body>
+</html>
